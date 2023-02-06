@@ -1,4 +1,4 @@
-package pe.com.apijoecyber.impl.gestion;
+package pe.com.apijoecyber.service.impl.gestion;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
