@@ -23,7 +23,12 @@ public class CategoriaRest {
         return service.add(c);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/custom")
+    public List<CategoriaEntity> findAllCustom() {
+        return service.findAllCustom();
+    }
+
+    @PutMapping("/{id}")
     public CategoriaEntity update(@PathVariable long id, @RequestBody CategoriaEntity c){
         c.setCodigo(id);
         return service.update(c);

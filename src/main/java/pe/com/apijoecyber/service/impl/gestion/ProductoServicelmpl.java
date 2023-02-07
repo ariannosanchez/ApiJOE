@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.com.apijoecyber.entity.base.gestion.ProductoEntity;
 import pe.com.apijoecyber.repository.gestion.ProductoRepository;
 import pe.com.apijoecyber.service.gestion.ProductoService;
 
 
+@Service
 public class ProductoServicelmpl implements ProductoService{
     
      @Autowired

@@ -40,10 +40,9 @@ public class ProductoRest {
         return servicio.findById(id);
     }
     @PutMapping("/{id}")
-    public ProductoEntity update(@PathVariable long id,@RequestBody ProductoEntity c){
-        c.getIdprod();
+    public ProductoEntity update(@PathVariable long id, @RequestBody ProductoEntity c){
+        c.setIdprod(id);
         return servicio.update(c);
-   
     }
     
     @DeleteMapping("/{id}")
