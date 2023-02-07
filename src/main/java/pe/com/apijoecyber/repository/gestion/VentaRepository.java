@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VentaRepository extends JpaRepository<VentaEntity, Long>{
     @Query("select v from VentaEntity v where v.estado=1")
-    List<ProductoEntity> findAllCustom(
+    List<VentaEntity> findAllCustom();
 }

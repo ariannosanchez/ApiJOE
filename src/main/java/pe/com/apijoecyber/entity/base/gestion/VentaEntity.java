@@ -41,8 +41,5 @@ public class VentaEntity extends BaseEntity implements Serializable{
     @ManyToOne
     @JoinColumn(name = "idempleado",nullable = false)
     private EmpleadoEntity empleado;    
-    
-    
-    
-    
+
 }

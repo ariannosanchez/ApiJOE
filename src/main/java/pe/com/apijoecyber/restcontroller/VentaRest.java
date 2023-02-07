@@ -6,20 +6,15 @@ import pe.com.apijoecyber.entity.base.gestion.VentaEntity;
 import pe.com.apijoecyber.service.gestion.VentaService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/venta")
 public class VentaRest {
-    
 
-    
     @Autowired
     private VentaService service;
 
-    
-    
-    
-    
     @GetMapping
     public List<VentaEntity> findAll(){
         return service.findAll();
@@ -28,6 +23,11 @@ public class VentaRest {
     @PostMapping
     public VentaEntity add(@RequestBody VentaEntity v){
         return service.add(v);
+    }
+
+    @GetMapping("/{id}")
+    public Optional<VentaEntity> findById(@PathVariable long id){
+        return service.findById(id);
     }
 
     @GetMapping("/custom")
