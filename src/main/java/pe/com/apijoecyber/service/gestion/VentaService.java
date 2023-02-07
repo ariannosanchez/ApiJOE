@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package pe.com.apijoecyber.service.gestion;
 
-/**
- *
- * @author Percy
- */
-public interface VentaService {
+import pe.com.apijoecyber.entity.base.gestion.VentaEntity;
+import pe.com.apijoecyber.service.generic.GenericService;
+
+public interface VentaService extends GenericService<VentaEntity>{
     
 }
