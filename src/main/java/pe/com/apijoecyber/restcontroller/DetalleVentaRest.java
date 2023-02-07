@@ -42,14 +42,14 @@ public class DetalleVentaRest {
     }
     @PutMapping("/{id}")
     public DetalleVentaEntity update(@PathVariable long id, @RequestBody DetalleVentaEntity r){     
-        r.setCodigo(id);
+        r.setIddetalle(id);
         return service.update(r);
     }
      @DeleteMapping("/{id}")
     public DetalleVentaEntity delete(@PathVariable long id){
         DetalleVentaEntity objrol = new DetalleVentaEntity();
-        objrol.setCodigo(id);
-        return service.delete(DetalleVentaEntity.builder().codigo(id).build());
+        objrol.setIddetalle(id);
+        return service.delete(DetalleVentaEntity.builder().iddetalle(id).build());
     }
 
 }

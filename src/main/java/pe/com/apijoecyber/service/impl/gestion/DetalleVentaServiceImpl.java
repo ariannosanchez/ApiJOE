@@ -39,14 +39,14 @@ public class DetalleVentaServiceImpl implements DetalleVentaService{
 
     @Override
     public DetalleVentaEntity update(DetalleVentaEntity t) {
-        DetalleVentaEntity objrol = repository.getById(t.getCodigo());
+        DetalleVentaEntity objrol = repository.getById(t.getIddetalle());
         BeanUtils.copyProperties(t, objrol);
         return repository.save(objrol);
     }
 
     @Override
     public DetalleVentaEntity delete(DetalleVentaEntity t) {
-        DetalleVentaEntity objrol = repository.getById(t.getCodigo());
+        DetalleVentaEntity objrol = repository.getById(t.getIddetalle());
         objrol.setEstado(false);
         return repository.save(objrol);
     }

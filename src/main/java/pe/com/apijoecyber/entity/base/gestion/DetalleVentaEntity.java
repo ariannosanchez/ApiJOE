@@ -13,8 +13,19 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import pe.com.apijoecyber.entity.base.BaseEntity;
 
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@EqualsAndHashCode(callSuper = false)
 @Entity(name = "DetalleVentaEntity")
 @Table(name = "detalle_pedido")
 public class DetalleVentaEntity extends BaseEntity implements Serializable{
