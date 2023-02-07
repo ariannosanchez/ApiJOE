@@ -38,4 +38,10 @@ public class EmpleadoRest  {
         f.setCodigo(id);
         return service.update(f);
     }
+    @DeleteMapping("/{id}")
+    public EmpleadoEntity delete(@PathVariable long id){
+        EmpleadoEntity objempleado = new EmpleadoEntity();
+        objempleado.setCodigo(id);
+        return service.delete(EmpleadoEntity.builder().codigo(id).build());
+    }
 }
