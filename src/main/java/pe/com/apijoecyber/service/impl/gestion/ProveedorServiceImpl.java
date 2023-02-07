@@ -4,53 +4,51 @@
  */
 package pe.com.apijoecyber.service.impl.gestion;
 
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.com.apijoecyber.entity.base.gestion.EmpleadoEntity;
-import pe.com.apijoecyber.repository.gestion.EmpleadoRepository;
-import pe.com.apijoecyber.service.gestion.EmpleadoService;
-
+import pe.com.apijoecyber.entity.base.gestion.ProveedorEntity;
+import pe.com.apijoecyber.repository.gestion.ProveedorRepository;
+import pe.com.apijoecyber.service.gestion.ProveedorService;
 
 @Service
-public class EmpleadoServiceImpl implements EmpleadoService {
+public class ProveedorServiceImpl implements ProveedorService{
     @Autowired
-    private EmpleadoRepository repository;
+    private ProveedorRepository repository;
     
     @Override
-    public List<EmpleadoEntity> findAll() {
+    public List<ProveedorEntity> findAll() {
         return repository.findAll();
     }
-
     @Override
-    public List<EmpleadoEntity> findAllCustom() {
+    public List<ProveedorEntity> findAllCustom() {
         return repository.findAllCustom();
     }
 
     @Override
-    public EmpleadoEntity add(EmpleadoEntity t) {
+    public ProveedorEntity add(ProveedorEntity t) {
         return repository.save(t);
     }
 
     @Override
-    public Optional<EmpleadoEntity> findById(Long id) {
+    public Optional<ProveedorEntity> findById(Long id) {
         return repository.findById(id);
     }
 
     @Override
-    public EmpleadoEntity update(EmpleadoEntity t) {
-        EmpleadoEntity objrol = repository.getById(t.getCodigo());
+    public ProveedorEntity update(ProveedorEntity t) {
+        ProveedorEntity objrol = repository.getById(t.getIdproveedor());
         BeanUtils.copyProperties(t, objrol);
         return repository.save(objrol);
     }
 
     @Override
-    public EmpleadoEntity delete(EmpleadoEntity t) {
-        EmpleadoEntity objrol = repository.getById(t.getCodigo());
+    public ProveedorEntity delete(ProveedorEntity t) {
+        ProveedorEntity objrol = repository.getById(t.getIdproveedor());
         objrol.setEstado(false);
         return repository.save(objrol);
     }
-    
 }

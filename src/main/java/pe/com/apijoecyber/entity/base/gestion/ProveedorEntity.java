@@ -26,7 +26,7 @@ import pe.com.apijoecyber.entity.base.BaseEntity;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity(name = "ProveedorEntity")
-@Table(name = "proveedores")
+@Table(name = "proveedor")
 public class ProveedorEntity extends BaseEntity implements Serializable{
     private static final long serialVersionUID=1L;
     @Id
