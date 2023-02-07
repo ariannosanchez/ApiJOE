@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.com.apijoecyber.entity.base.gestion.EmpleadoEntity;
 import pe.com.apijoecyber.repository.gestion.EmpleadoRepository;
 import pe.com.apijoecyber.service.gestion.EmpleadoService;
@@ -16,6 +17,7 @@ import pe.com.apijoecyber.service.gestion.EmpleadoService;
  *
  * @author medina
  */
+@Service
 public class EmpleadoServiceImpl implements EmpleadoService {
     @Autowired
     private EmpleadoRepository repository;

@@ -4,17 +4,29 @@
  */
 package pe.com.apijoecyber.entity.base.gestion;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import pe.com.apijoecyber.entity.base.BaseEntity;
 
 /**
  *
  * @author medina
  */
+
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@EqualsAndHashCode(callSuper = true)
+@Entity(name = "ProveedorEntity")
+@Table(name = "proveedores")
 public class ProveedorEntity extends BaseEntity implements Serializable{
     private static final long serialVersionUID=1L;
     @Id
