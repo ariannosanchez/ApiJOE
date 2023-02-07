@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface GenericService<T> {
-
     List<T> findAll();
     List<T> findAllCustom();
     T add(T t);

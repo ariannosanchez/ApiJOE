@@ -9,10 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import pe.com.apijoecyber.entity.base.gestion.EmpleadoEntity;
 
-/**
- *
- * @author medina
- */
 public interface EmpleadoRepository extends JpaRepository<EmpleadoEntity, Long> {
     @Query("select f from EmpleadoEntity f where f.estado=1")
     List<EmpleadoEntity> findAllCustom();
