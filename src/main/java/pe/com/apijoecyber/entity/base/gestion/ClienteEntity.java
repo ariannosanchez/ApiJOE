@@ -1,5 +1,13 @@
 package pe.com.apijoecyber.entity.base.gestion;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import pe.com.apijoecyber.entity.base.BaseEntity;
+
 import java.io.Serializable;
 
 @SuperBuilder

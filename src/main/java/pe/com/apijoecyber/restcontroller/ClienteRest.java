@@ -26,8 +26,8 @@ public class ClienteRest {
     }
 
     @PostMapping
-    public ClienteEntity add(@RequestBody ClienteEntity r){
-        return service.add(r);
+    public ClienteEntity add(@RequestBody ClienteEntity cli){
+        return service.add(cli);
     }
 
     @GetMapping("/{id}")
@@ -36,9 +36,9 @@ public class ClienteRest {
     }
 
     @PutMapping("/{id}")
-    public ClienteEntity update(@PathVariable long id, @RequestBody ClienteEntity r){
-        r.setCodigo(id);
-        return service.update(r);
+    public ClienteEntity update(@PathVariable long id, @RequestBody ClienteEntity cli){
+        cli.setCodigo(id);
+        return service.update(cli);
     }
 
     @DeleteMapping("/{id}")
